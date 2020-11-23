@@ -1,0 +1,123 @@
+1. Mailing Address
+
+print("John Kim \n58 Paul Markway \nNORTH YORK ON M2H1S7")
+
+2. Say my name hello!
+
+name = input("What is your name: ")
+print(f"Hi nice to meet you {name}! {name}'s a very cool name :D")
+
+3. Area of a Room
+
+width = int(input("Width: ")
+length = int(input("Length: ")
+area = width * length
+
+print("Your room's area is: {area}m^2
+
+4. Area of a Field
+
+print("Please give the following measurements in feet: ")
+width = int(input("Width: "))
+length = int(input("Length: "))
+area = width * length
+
+aia = round(area/43560,2)
+
+print(f"Your field's area is {aia} acres")
+
+5. Bottle deposits
+
+small = int(input("Enter the number of bottles that hold one liter or less: "))
+
+large = int(input("Enter the number of bottles that hold more than one liter: "))
+
+refund = round(small * 0.10 + large * 0.25,2)
+print(f"Your refund is ${refund}.")
+
+6. Tax and Tip
+
+meal = int(input("Price of meal: "))
+tax = meal * 0.13
+tip = meal * 0.18
+total = round(meal + tax + tip,2)
+
+print(f"Tax:               ${tax}")
+print(f"Tip:               ${tip}")
+print(f"Total:             ${total}")
+
+7. Sum of positive integers
+
+n = int(input("Enter POSITIVE integer here: "))
+
+if n <= 0:
+        print("\nError, please enter another number")
+
+else: 
+    sum = (n * (n + 1)/2)
+    print(f"\nYour sum is: {sum}")
+    
+8. Widgets and Gizmos
+
+widget = int(input("Enter number of widgets: "))
+gizmos = int(input("Enter number of gizmos: "))
+
+gwidget = 75 * widget
+ggizmos = 112 * gizmos
+total = gwidget + ggizmos
+
+print(f"\n\nYour gizmos weight: {gwidget}g")
+print(f"Your widget weight: {ggizmos}g")
+print(f"Your total weight:  {total}g")
+
+9. Compound Interest
+
+balance = int(input("Your bank balance: $"))
+yearnumber = int(input("In how many years?: "))
+
+#FV = P * (((1 + ((r/100.0)/n)) ** (n*y)))
+total = round(balance * (((1 + ((4/100.0)/1)) ** (1 * yearnumber))),2)
+
+print(f"Your balance in {yearnumber} years will be ${total}. Have a good day!")
+
+10. Arithmetic
+
+a = int(input("Value of a: "))
+b = int(input("Value of b: "))
+
+
+
+print("\n1. a + b")
+print("2. a - b")
+print("3. a * b")
+print("4. a / b")
+print("5. Remainder of a / b")
+print("6. log10(a)")
+print("7. a ^ b\n")
+
+choice = int(input("Which arithmetic would you like to do?: "))
+
+import math
+
+if choice == 1: 
+    one = a + b
+    print(f"Answer: {one}")
+if choice == 2: 
+    two = a - b
+    print(f"Answer: {two}")
+if choice == 3:
+    three = a * b
+    print(f"Answer: {three}")
+if choice == 4: 
+    four = a / b
+    print(f"Answer: {four}")
+if choice == 5: 
+    five = a % b
+    print(f"Answer: {five}")
+if choice == 6: 
+    six = math.log10(a)
+    print(f"Answer: {six}")
+if choice == 7: 
+    seven = a ** b
+    print(f"Answer: {seven}")
+
