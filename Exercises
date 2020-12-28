@@ -121,3 +121,62 @@ if choice == 7:
     seven = a ** b
     print(f"Answer: {seven}")
 
+11. Fuel Efficiency
+
+print("[A] Convert from MPG to L/100Km\n[B] Convert from L/100Km to MPG")
+
+convert_choice = input("\nPlease choose [A] or [B]: ")
+if convert_choice == "A" or convert_choice == "a":
+    mpg_convert = int(input("\nHow many Miles per Gallon?: "))
+    converted_mpg = round(235.214583/mpg_convert,2)
+    print(f"\n{mpg_convert} MPG converts into {converted_mpg} L/100Km")
+elif convert_choice == "B" or convert_choice == "b":
+    km_convert = int(input("\nHow many Litres/100Km?: "))
+    converted_km = round(235.215/km_convert,2)
+    print(F"\n{km_convert}L/100Km converts into {converted_km} MPG")
+
+13. Making Change
+
+price = float(input("Total price at checkout: $"))
+customer_cash = int(input("Amount of cash given: $"))
+difference = int(round(customer_cash - price,2))
+cc_in_cents = difference*100
+print("Your change is ${}".format(difference))
+
+toonie_cent = 200
+loonie_cent = 100
+quarter_cent = 25
+dime_cent = 10
+nickel_cent = 5
+
+print("\nYour change consists of:\n")
+print(cc_in_cents//toonie_cent, "toonies")
+cc_in_cents = cc_in_cents % toonie_cent
+
+print(cc_in_cents//loonie_cent, "loonies")
+cc_in_cents = cc_in_cents % loonie_cent
+
+print(cc_in_cents//quarter_cent, "quarters")
+cc_in_cents = cc_in_cents % quarter_cent
+
+print(cc_in_cents//dime_cent, "dimes")
+cc_in_cents = cc_in_cents % dime_cent
+
+print(cc_in_cents//nickel_cent, "nickels")
+
+14. Height Units
+
+print("Please enter your height in imperial measurements.\nFeet first then inches.\n")
+feet = int(input("Feet: "))
+inches = int(input("Inches: "))
+
+converting = (feet*12+inches)*2.54
+print("\nYour height in centimetres is {}".format(converting
+
+15. Distance Units
+
+feet = int(input("Please enter your measurement in feet: "))
+print("\nFeet to inches ->", feet*12, "inches")
+print("Feet to yards ->" ,round(feet/3,2), "yards")
+print("Feet to miles ->", round(feet/5280,2), "miles")
+
