@@ -1,4 +1,5 @@
-# #Exercise 81
+Exercise 81
+
 from math import sqrt
 
 def theorem (a, b):
@@ -28,6 +29,73 @@ def hypotenuse (a: float, b:float) -> float:
         the length of the hypotenuse.
     """
     return sqrt(a**2 + b**2)
+
+if __name__ == "__main__":
+    main()
+
+Exercise 82
+
+def main():
+    km = float(input("Enter the kilmeters travelled: "))
+    fare = calculate_taxi_fare(km)
+    print("The cost is ${}.".format(fare))
+def calculate_taxi_fare(distance: float) -> float:
+    """Calculate the taxi faire. 
+
+    Args:
+        Distance: the distanc travelled in kilometers.
+
+    Returns:
+        The cost of the fare in dollars.
+    """
+    meters = distance *1000
+    fare = 4.00 + 0.25 * meters // 140
+    return fare
+
+if __name__ =="__main__":
+    main()
+
+Exercise 83 Shipping Calculator:
+
+def main():
+    how_many = int(input("How many items are being shipped?: "))
+    if how_many <= 0:
+        print ("$0") 
+    elif how_many == 1:
+        print("$10.95")
+    else:
+        shipping_cost(how_many)
+def shipping_cost(item:int) -> int:
+    shipping_cost = 10.95 + 2.95 * item
+    print ("$",shipping_cost)
+
+if __name__ == "__main__":
+    main()
+    
+Exercise 84 Median of Three Values
+
+from statistics import median
+
+def main():
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    c = float(input("Enter third number: "))
+    median_number = median_value(a, b, c)
+    print(f"The median is {median_number}")
+
+def median_value(a:float, b:float, c:float) -> float:
+    """Find the median value of three numbers.
+
+        Arfloat
+        a: number 1
+        b: number 2
+        c: number 3
+
+        Returns:
+        The median of the three numbers
+        """
+    three_numbers = (a, b, c)
+    return median(three_numbers)
 
 if __name__ == "__main__":
     main()
