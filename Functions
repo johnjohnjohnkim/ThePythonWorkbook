@@ -1,0 +1,33 @@
+# #Exercise 81
+from math import sqrt
+
+def theorem (a, b):
+    return sqrt(a**2 + b**2)
+a = float(input("Length: "))
+b = float(input("Width: "))
+print("Hypotenuse:", theorem(a, b), "cm")
+
+# Method two:
+
+def main():
+
+    a = float (input("Length: "))
+    b = float (input("Width: "))
+
+    answer = hypotenuse(a, b)
+    print("The hypotenuse is {} cm.".format(answer))
+
+def hypotenuse (a: float, b:float) -> float:
+    """Calculate the hypotenuse of a right-angled triangle.
+
+    Args:
+        a: The length of side a
+        b: The length of side b
+    
+    Returns:
+        the length of the hypotenuse.
+    """
+    return sqrt(a**2 + b**2)
+
+if __name__ == "__main__":
+    main()
