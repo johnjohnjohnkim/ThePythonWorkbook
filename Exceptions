@@ -1,0 +1,83 @@
+Exercise 81
+from math import sqrt
+def main():
+    while True:
+        try:
+            a = float (input("Length: "))
+            break
+        except ValueError:
+            print("Invalid input, please try again")
+    while True:
+        try:
+            b = float (input("Width: "))
+            break
+        except ValueError:
+            print("Invalid input, please try again")
+
+    answer = hypotenuse(a, b)
+    print("The hypotenuse is {} cm.".format(answer))
+
+def hypotenuse (a: float, b:float) -> float:
+    """Calculate the hypotenuse of a right-angled triangle.
+
+    Args:
+        a: The length of side a
+        b: The length of side b
+    
+    Returns:
+        the length of the hypotenuse.
+    """
+    return sqrt(a**2 + b**2)
+
+if __name__ == "__main__":
+    main()
+
+Exercise 82
+
+def main():
+    while True:
+        try:
+            km = float(input("Enter the kilometers travelled: "))
+            if km < 0:
+                raise ValueError
+            break
+        except ValueError:
+            print("Invalid input, please try again")
+    fare = calculate_taxi_fare(km)
+    print("The cost is ${}.".format(fare))
+def calculate_taxi_fare(distance: float) -> float:
+    """Calculate the taxi faire. 
+
+    Args:
+        Distance: the distanc travelled in kilometers.
+
+    Returns:
+        The cost of the fare in dollars.
+    """
+    meters = distance *1000
+    fare = 4.00 + 0.25 * meters // 140
+    return fare
+
+if __name__ =="__main__":
+    main()
+
+def main():
+    while True:
+        try:
+            how_many = int(input("How many items are being shipped?: "))
+            break
+        except ValueError:
+            print("Invalid number, please try again")
+    if how_many <= 0:
+        print ("$0") 
+    elif how_many == 1:
+        print("Your shipping cost will be $10.95")
+    else:
+        shipping_cost(how_many)
+def shipping_cost(item:int) -> int:
+    shipping_cost = 10.95 + 2.95 * item
+    print ("Your shipping cost will be $",shipping_cost)
+
+if __name__ == "__main__":
+    main()
+
