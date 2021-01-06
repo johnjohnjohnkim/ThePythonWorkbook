@@ -1,21 +1,22 @@
 Exercise 81
 from math import sqrt
 def main():
-    while True:
-        try:
-            a = float (input("Length: "))
-            break
-        except ValueError:
-            print("Invalid input, please try again")
-    while True:
-        try:
-            b = float (input("Width: "))
-            break
-        except ValueError:
-            print("Invalid input, please try again")
 
+    a = some_number("Length: ")
+    b = some_number("Width: ")
     answer = hypotenuse(a, b)
     print("The hypotenuse is {} cm.".format(answer))
+
+def some_number(words:str):
+    while True:
+        try:
+            num = float(input(words))
+            if num <= 0:
+                raise ValueError
+            return num
+            break
+        except ValueError:
+            print("Invalid input, please try again")
 
 def hypotenuse (a: float, b:float) -> float:
     """Calculate the hypotenuse of a right-angled triangle.
@@ -31,7 +32,7 @@ def hypotenuse (a: float, b:float) -> float:
 
 if __name__ == "__main__":
     main()
-
+    
 Exercise 82
 
 def main():
@@ -83,30 +84,22 @@ if __name__ == "__main__":
 
 Exercise 84:
 
-
 from statistics import median
-
 def main():
-    while True:
-        try:
-            a = float(input("Enter first number: "))
-            break
-        except ValueError:
-            print("Invalid input, please try again")
-    while True:
-        try:
-            b = float(input("Enter second number: "))
-            break
-        except ValueError:
-            print("Invalid input, please try again")
-    while True:
-        try:
-            c = float(input("Enter third number: "))
-            break
-        except ValueError:
-            print("Invalid input, please try again")
+    a = median_inputs("Number 1: ")
+    b = median_inputs("Number 2:")
+    c = median_inputs("Number 3: ")
     median_number = median_value(a, b, c)
     print(f"The median is {median_number}")
+
+def median_inputs(values:str):
+    while True:
+        try:
+            num = float(input(values))
+            return num
+            break
+        except ValueError:
+            print("Invalid input, please try again")
 
 def median_value(a:float, b:float, c:float) -> float:
     """Find the median value of three numbers.
