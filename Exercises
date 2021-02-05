@@ -171,7 +171,7 @@ feet = int(input("Feet: "))
 inches = int(input("Inches: "))
 
 converting = (feet*12+inches)*2.54
-print("\nYour height in centimetres is {}".format(converting
+print("\nYour height in centimetres is {}".format(converting)
 
 15. Distance Units
 
