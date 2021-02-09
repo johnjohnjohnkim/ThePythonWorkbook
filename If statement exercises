@@ -15,7 +15,7 @@ if years <= 2:
     child = 10.5 * years
     print(f"Your dog is {child} years old.")
 
-if years > 2:
+elif years > 2:
     (adult) = 21 + 4 * (years - 2)
     print(f"Your dog is {adult} years old.")
     
@@ -37,7 +37,7 @@ else years < 50:
 elif years < 0:
     print("Unavailable number, try again.")
     
-Exercise 36: (GO OVER NOT PROERPLY DONE)
+Exercise 36:
 
 letter = input("Please enter a letter of the alphabet: ")
 
